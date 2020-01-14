@@ -1,6 +1,6 @@
 
 ## Result
-[Bouncy](https://oksanarutska.github.io/bouncy/public/)
+[Sport](https://oksanarutska.github.io/Sport/public/)
 ## Technology
 - pug(jade)
 - sass
