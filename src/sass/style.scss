@@ -215,15 +215,15 @@
 }
 
 @media only screen and (min-width: 1440px) and (min-height: 862px) {
-    .second-photo {
+    .wrapper-second-photo {
         width: 238px;
         height: 331px;
     }
-    .first-photo {
+    .wrapper-first-photo {
         width: 476px;
         height: 702px;
     }
-    .third-photo {
+    .wrapper-third-photo {
         width: 345px;
         height: 238px;
     }
@@ -236,13 +236,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .first-photo {
+    .wrapper-first-photo {
         width: 270px;
     }
-    .second-photo {
+    .wrapper-second-photo {
         width: 120px;
     }
-    .third-photo {
+    .wrapper-third-photo {
         width: 140px;
         left: 0!important;
     }
@@ -299,15 +299,15 @@
     .burger-menu div:first-child {
         margin-bottom: 5px;
     }
-    .first-photo {
+    .wrapper-first-photo {
         width: 273px;
         height: 403px;
         transform: rotate(1.5deg)!important;
     }
-    .second-photo {
+    .wrapper-second-photo {
         display: none!important;
     }
-    .third-photo {
+    .wrapper-third-photo {
         display: none!important;
     }
     .slide-item {
@@ -323,7 +323,7 @@
     .wrapper {
         padding: 20px 0;
     }
-    .first-photo {
+    .wrapper-first-photo {
         width: 249.67px;
         height: 368.56px;
     }
