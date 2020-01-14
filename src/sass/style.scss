@@ -87,40 +87,56 @@
 }
 
 .wrapper-img {
+    display: flex;
     position: absolute;
     top: 80px;
 }
 
-.first-photo {
-    //  Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
-    display: unset !important;
+.wrapper-first-photo {
+    display: block !important;
     position: unset !important;
     margin: 0 10px;
     width: 359px;
     height: 530px;
+}
+
+.first-photo {
+    //  Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transform: rotate(1.5deg);
 }
 
-.second-photo {
-    // Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
-    display: unset !important;
+.wrapper-second-photo {
+    display: block !important;
     position: relative !important;
-    top: -195px !important;
+    top: 95px !important;
     width: 238px;
     height: 226px;
+}
+
+.second-photo {
+    // Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transform: rotate(1.1deg);
 }
 
-.third-photo {
-    // Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
-    display: unset !important;
+.wrapper-third-photo {
+    display: block !important;
     position: relative !important;
-    top: -35px !important;
+    top: 315px !important;
     left: -58px !important;
     width: 234px;
     height: 162px;
+}
+
+.third-photo {
+    // Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transform: rotate(2.03deg);
 }
@@ -162,6 +178,10 @@
         line-height: 13px;
         letter-spacing: 0.02em;
         color: $color_black;
+        text-decoration: none;
+        &:hover {
+            cursor: url('./../img/cursor.png'), auto;
+        }
     }
     &-line {
         width: 56px;
@@ -176,7 +196,7 @@
     position: absolute;
     display: none;
     font-family: TT Travels;
-    font-size: 8px;
+    font-size: 1.1em;
     line-height: 10px;
     letter-spacing: 0.02em;
     color: $color_black;
@@ -263,6 +283,12 @@
     #checkbox:checked~.burger-menu div:nth-child(2) {
         transition: all 300ms ease-in-out;
         transform: rotate(-45deg);
+    }
+    #checkbox:not(checked)~.burger-menu div:nth-child(1) {
+        transition: all 300ms ease-in-out;
+    }
+    #checkbox:not(checked)~.burger-menu div:nth-child(2) {
+        transition: all 300ms ease-in-out;
     }
     .burger-menu {
         display: flex;
