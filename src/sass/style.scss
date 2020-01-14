@@ -200,6 +200,7 @@
     line-height: 10px;
     letter-spacing: 0.02em;
     color: $color_black;
+    z-index: 30;
 }
 
 #checkbox {
@@ -235,7 +236,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 850px) {
     .wrapper-first-photo {
         width: 270px;
     }
@@ -244,7 +245,7 @@
     }
     .wrapper-third-photo {
         width: 140px;
-        left: 0!important;
+        left: -75px!important;
     }
     .wrapper-img {
         top: 125px;
@@ -319,7 +320,7 @@
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
     .wrapper {
         padding: 20px 0;
     }
