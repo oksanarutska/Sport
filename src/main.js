@@ -1,11 +1,10 @@
 var landing = {
     init: function() {
-
         this.scene = document.getElementById('scene');
         this.wrapperImg = document.querySelector('.wrapper-img');
-        this.secondPhoto = document.querySelector('.second-photo').src;
-        this.firstPhoto = document.querySelector('.first-photo').src;
-        this.thirdPhoto = document.querySelector('.third-photo').src;
+        this.firstPhoto = document.querySelector('.first-photo');
+        this.secondPhoto = document.querySelector('.second-photo');
+        this.thirdPhoto = document.querySelector('.third-photo');
         this.swiperCont = document.querySelector(".swiper-container");
         this.textMouse = document.querySelector(".text-mouse");
 
@@ -51,10 +50,11 @@ var landing = {
                     this.wrapperImg.classList.add('change-slide')
                 }.bind(this),
                 slideChangeTransitionEnd: function() {
+                    let firstPhotoSrc = this.firstPhoto.src;
 
-                    document.querySelector('.second-photo').src = this.thirdPhoto
-                    document.querySelector('.first-photo').src = this.secondPhoto
-                    document.querySelector('.third-photo').src = this.firstPhoto
+                    this.firstPhoto.src = this.secondPhoto.src;
+                    this.secondPhoto.src = this.thirdPhoto.src;
+                    this.thirdPhoto.src = firstPhotoSrc;
 
                     this.wrapperImg.classList.remove('change-slide');
                 }.bind(this),
