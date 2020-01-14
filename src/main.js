@@ -50,12 +50,11 @@ var landing = {
                     this.wrapperImg.classList.add('change-slide')
                 }.bind(this),
                 slideChangeTransitionEnd: function() {
+                    // Swap photos
                     let firstPhotoSrc = this.firstPhoto.src;
-
                     this.firstPhoto.src = this.secondPhoto.src;
                     this.secondPhoto.src = this.thirdPhoto.src;
                     this.thirdPhoto.src = firstPhotoSrc;
-
                     this.wrapperImg.classList.remove('change-slide');
                 }.bind(this),
             }
