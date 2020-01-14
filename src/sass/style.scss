@@ -93,6 +93,7 @@
 }
 
 .wrapper-first-photo {
+    //  Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
     display: block !important;
     position: unset !important;
     margin: 0 10px;
@@ -101,7 +102,6 @@
 }
 
 .first-photo {
-    //  Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -109,6 +109,7 @@
 }
 
 .wrapper-second-photo {
+    //  Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
     display: block !important;
     position: relative !important;
     top: 95px !important;
@@ -117,7 +118,6 @@
 }
 
 .second-photo {
-    // Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -125,6 +125,7 @@
 }
 
 .wrapper-third-photo {
+    // Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
     display: block !important;
     position: relative !important;
     top: 315px !important;
@@ -134,7 +135,6 @@
 }
 
 .third-photo {
-    // Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
     width: 100%;
     height: 100%;
     object-fit: cover;

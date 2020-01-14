@@ -1,24 +1,27 @@
 // PARALLAX
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene);
+let scene = document.getElementById('scene');
+let parallaxInstance = new Parallax(scene);
 // SWIPER
-var swiper = new Swiper('.swiper-container', {
+let swiper = new Swiper('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
     centeredSlides: true,
     // other parameters
     breakpoints: {
-        // when window width is <= 1040px     
-        1000: {
-            slidesPerView: 1.5,
-        },
+        // when window width is <= 1100px    
         1100: {
             slidesPerView: 1.7,
         },
+        // when window width is <= 1000px 
+        1000: {
+            slidesPerView: 1.5,
+        },
+        // when window width is <= 480px 
         480: {
             slidesPerView: 1.5,
         },
+        // when window width is <= 320px 
         320: {
             slidesPerView: 1.3,
         }
@@ -28,9 +31,9 @@ var swiper = new Swiper('.swiper-container', {
             document.querySelector('.wrapper-img').classList.add('change-slide')
         },
         slideChangeTransitionEnd: function() {
-            var secondPhoto = document.querySelector('.second-photo').src
-            var firstPhoto = document.querySelector('.first-photo').src
-            var thirdPhoto = document.querySelector('.third-photo').src
+            let secondPhoto = document.querySelector('.second-photo').src
+            let firstPhoto = document.querySelector('.first-photo').src
+            let thirdPhoto = document.querySelector('.third-photo').src
 
             document.querySelector('.second-photo').src = thirdPhoto
             document.querySelector('.first-photo').src = secondPhoto
@@ -41,13 +44,14 @@ var swiper = new Swiper('.swiper-container', {
     }
 });
 
-document.querySelector(".swiper-container")
+let swiperCont = document.querySelector(".swiper-container")
+let textMouse = document.querySelector(".text-mouse")
+swiperCont
     .addEventListener('mousemove', function(pos) {
-        document.querySelector(".text-mouse").classList.add('show');
-        document.querySelector(".text-mouse").style.left = (pos.pageX + 15) + 'px';
-        document.querySelector(".text-mouse").style.top = (pos.pageY - 15) + 'px';
-
+        textMouse.classList.add('show');
+        textMouse.style.left = (pos.pageX + 15) + 'px';
+        textMouse.style.top = (pos.pageY - 15) + 'px';
     })
-document.querySelector(".swiper-container").addEventListener('mouseleave', function(pos) {
-    document.querySelector(".text-mouse").classList.remove('show');
+swiperCont.addEventListener('mouseleave', function(pos) {
+    textMouse.classList.remove('show');
 })
