@@ -1,0 +1,310 @@
+@import './reset';
+@import './variable';
+@import './fonts';
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo {
+    font-family: TT Travels-Bold;
+    font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: $color_black;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 5;
+    &__item {
+        margin-bottom: 10px;
+        font-family: TT Travels;
+        font-size: 1.1em;
+        line-height: 13px;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        color: $color_black;
+        text-decoration: none;
+        &:hover {
+            opacity: 0.6;
+            cursor: url('./../img/cursor.png'), auto;
+        }
+    }
+}
+
+.wrapper-main {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+// SWIPER SLIDER
+.swiper-container {
+    width: 100%;
+    min-height: 500px;
+    &:hover {
+        cursor: url('./../img/cursor.png'), auto;
+    }
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-line {
+    position: absolute;
+    top: 30px;
+}
+
+.line {
+    width: 506px;
+    height: 605px;
+}
+
+.line_move {
+    stroke-dasharray: 2300;
+    stroke-dashoffset: 2300;
+    animation: dash 6s linear forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.wrapper-img {
+    position: absolute;
+    top: 80px;
+}
+
+.first-photo {
+    //  Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
+    display: unset !important;
+    position: unset !important;
+    margin: 0 10px;
+    width: 359px;
+    height: 530px;
+    object-fit: cover;
+    transform: rotate(1.5deg);
+}
+
+.second-photo {
+    // Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
+    display: unset !important;
+    position: relative !important;
+    top: -195px !important;
+    width: 238px;
+    height: 226px;
+    object-fit: cover;
+    transform: rotate(1.1deg);
+}
+
+.third-photo {
+    // Important is set according to https://github.com/wagerfield/parallax/issues/131#issuecomment-212466891
+    display: unset !important;
+    position: relative !important;
+    top: -35px !important;
+    left: -58px !important;
+    width: 234px;
+    height: 162px;
+    object-fit: cover;
+    transform: rotate(2.03deg);
+}
+
+.slide-item {
+    font-family: Schnyder Cond XL Demi;
+    font-size: 9.6em;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: $color_white;
+    text-shadow: -1px 0 $color_maroon, 0 1px $color_maroon, 1px 0 $color_maroon, 0 -1px $color_maroon;
+}
+
+.swiper-slide-active .slide-item {
+    color: $color_maroon
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.change-slide {
+    animation: opacity 300ms ease-in-out;
+}
+
+.footer {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    &-text {
+        font-family: TT Travels;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.02em;
+        color: $color_black;
+    }
+    &-line {
+        width: 56px;
+        height: 1px;
+        margin: 0 8px;
+        background-color: $color_gray;
+        opacity: 0.24;
+    }
+}
+
+.text-mouse {
+    position: absolute;
+    display: none;
+    font-family: TT Travels;
+    font-size: 8px;
+    line-height: 10px;
+    letter-spacing: 0.02em;
+    color: $color_black;
+}
+
+#checkbox {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+@media only screen and (min-width: 1440px) and (min-height: 862px) {
+    .second-photo {
+        width: 238px;
+        height: 331px;
+    }
+    .first-photo {
+        width: 476px;
+        height: 702px;
+    }
+    .third-photo {
+        width: 345px;
+        height: 238px;
+    }
+    .slide-item {
+        font-size: 12.6em;
+    }
+    .wrapper-line {
+        top: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .first-photo {
+        width: 270px;
+    }
+    .second-photo {
+        width: 120px;
+    }
+    .third-photo {
+        width: 140px;
+        left: 0!important;
+    }
+    .wrapper-img {
+        top: 125px;
+    }
+    .slide-item {
+        font-size: 6.6em;
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    .wrapper-menu {
+        z-index: 10;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .menu-line {
+        width: 20px;
+        height: 1px;
+        background-color: $color_gray;
+    }
+    #checkbox {
+        opacity: 0;
+    }
+    #checkbox:checked~.nav-menu {
+        display: flex;
+        position: absolute;
+        margin-top: 10px;
+        right: 15px;
+    }
+    #checkbox:checked~.burger-menu div:nth-child(1) {
+        transition: all 300ms ease-in-out;
+        transform: rotate(45deg);
+        margin-bottom: 0;
+    }
+    #checkbox:checked~.burger-menu div:nth-child(2) {
+        transition: all 300ms ease-in-out;
+        transform: rotate(-45deg);
+    }
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        margin-top: -12px;
+        cursor: url('./../img/cursor.png'), auto;
+    }
+    .burger-menu div:first-child {
+        margin-bottom: 5px;
+    }
+    .first-photo {
+        width: 273px;
+        height: 403px;
+        transform: rotate(1.5deg)!important;
+    }
+    .second-photo {
+        display: none!important;
+    }
+    .third-photo {
+        display: none!important;
+    }
+    .slide-item {
+        font-size: 4.8em;
+    }
+    .line {
+        max-width: 392px;
+        max-height: 493px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .wrapper {
+        padding: 20px 0;
+    }
+    .first-photo {
+        width: 249.67px;
+        height: 368.56px;
+    }
+    .slide-item {
+        font-size: 3.2em;
+    }
+    .line {
+        width: 300px;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body style="height: 100%;">
+    <header class="wrapper">
+        <div class="header">
+            <p class="logo">Logo Logo</p>
+            <nav class="wrapper-menu">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" class="burger-menu">
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                </label>
+                <div class="nav-menu">
+                    <a class="nav-menu__item" href="/">Commercial</a>
+                    <a class="nav-menu__item" href="/">Editorial</a>
+                    <a class="nav-menu__item" href="/">Reportage</a>
+                    <a class="nav-menu__item" href="/">Meet me</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="wrapper-main">
+        <div class="wrapper-line ">
+            <svg class="line " width="610 " height="728 " viewBox="0 0 610 728 " fill="none " xmlns="http://www.w3.org/2000/svg ">
+                <path class='line_move' d="M139.416 31.4647C-159.248 309.376 101.471 367.764 214.964 1C336.277 136.37 767.08 317.52 345.08 103.2C594.544 524.358 643.701 254.041 589.613 727.477 " stroke="#2828BD "/>
+            </svg>
+        </div>
+        <div id="scene" class="wrapper-img">
+            <img data-depth="-0.1" class="second-photo" src="./img/girl-img-2.png " alt="girl-photo ">
+            <img data-depth="0.4" class="first-photo" src="./img/girl-img-1.png " alt="girl-photo ">
+            <img data-depth="-0.3" class="third-photo" src="./img/girl-img-3.png " alt="girl-photo ">
+        </div>
+        <!-- SWIPER SLIDER -->
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class=" swiper-wrapper ">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <p class="slide-item">
+                        Ink Lingerie
+                    </p>
+                </div>
+                <div class="swiper-slide ">
+                    <p class="slide-item">
+                        Ink Lingerie
+                    </p>
+                </div>
+                <div class="swiper-slide ">
+                    <p class="slide-item">
+                        Ink Lingerie
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="text-mouse">Drag me</p>
+    </main>
+    <footer class="wrapper">
+        <div class="footer">
+            <p class="footer-text">Inst</p>
+            <div class="footer-line"></div>
+            <p class="footer-text">Fb</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js "></script>
+    <script src="parallax.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
