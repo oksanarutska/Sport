@@ -1,6 +1,6 @@
 
 ## Result
-[Sport](https://oksanarutska.github.io/Sport/public/)
+https://oksanarutska.github.io/Sport/public/
 ## Technology
 - scss
 - js
